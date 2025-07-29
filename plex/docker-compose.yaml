@@ -1,0 +1,14 @@
+services:
+  plex:
+    image: plexinc/pms-docker
+    container_name: plex
+    restart: unless-stopped
+    ports:
+      - "${PLEX_PORT}:32400"
+    environment:
+      - TZ=${TZ}
+      - PLEX_CLAIM=${PLEX_CLAIM}
+    volumes:
+      - "${PLEX_CONFIG}:/config"
+      - "${PLEX_TRANSCODE}:/transcode"
+      - "${PLEX_MEDIA}:/data"

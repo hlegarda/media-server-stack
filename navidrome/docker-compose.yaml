@@ -1,0 +1,19 @@
+services:
+  navidrome:
+    image: deluan/navidrome:latest
+    container_name: navidrome
+    ports:
+      - "${NAVIDROME_PORT}:4533"
+    environment:
+      ND_SCANSCHEDULE: ${ND_SCANSCHEDULE}
+      ND_LOGLEVEL: ${ND_LOGLEVEL}
+      ND_BASEURL: ${ND_BASEURL}
+      ND_LASTFM_APIKEY: ${ND_LASTFM_APIKEY}
+      ND_LASTFM_SECRET: ${ND_LASTFM_SECRET}
+      NAVIDROME_SECRETKEY: ${NAVIDROME_SECRETKEY}
+      ND_ENABLESHARING: ${ND_ENABLESHARING}
+      ND_ENABLETRANSCODINGCONFIG: ${ND_ENABLETRANSCODINGCONFIG}
+      ND_PLUGINS: ${ND_PLUGINS}
+    volumes:
+      - "${NAVIDROME_DATA}:/data"
+      - "${NAVIDROME_MUSIC}:/music:ro"
