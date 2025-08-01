@@ -2,6 +2,7 @@ services:
   navidrome:
     image: deluan/navidrome:latest
     container_name: navidrome
+    restart: unless-stopped
     ports:
       - "${NAVIDROME_PORT}:4533"
     environment:
