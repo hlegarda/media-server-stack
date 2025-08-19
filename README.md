@@ -118,8 +118,6 @@ Feel free to fork and adapt this stack for your own needs. PRs welcome for impro
 
 ## 📃 License
 
-This repository's helper scripts and configuration files are provided under the **MIT License**.
-
 > ⚠️ **Note:** Each individual service (e.g., Jellyfin, Plex, Navidrome, Nginx Proxy Manager) is a separate project and is governed by its own license. Refer to their official documentation or GitHub repositories for detailed licensing information.
 
 ---
