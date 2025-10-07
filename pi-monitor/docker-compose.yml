@@ -1,0 +1,9 @@
+services:
+  pi-monitor:
+    image: hlegarda/pi-monitor:latest
+    container_name: pi-monitor
+    restart: unless-stopped
+    ports:
+      - "5100:5100"
+    volumes:
+      - /mnt/media:/mnt/media
